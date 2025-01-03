@@ -23,7 +23,7 @@ public class TranslationConfigWindow extends JFrame {
 
         languageComboBox = new JComboBox<>(); // 可添加更多语言选项
         try {
-            Translator.getAllLanguageFiles().forEach(s -> languageComboBox.addItem(s));
+            Translator.getAllLanguageFiles().forEach(languageComboBox::addItem);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
